@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -67,14 +67,56 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "twitch-text-jump": {
+          "0%": {
+            transform: "translateY(5.2083333333vw)",
+            opacity: "0",
+          },
+          "5%": {
+            transform: "translateY(5.2083333333vw)",
+            opacity: "0",
+          },
+          "15%": {
+            transform: "translateY(5.2604166667vw)",
+            opacity: "0",
+          },
+          "20%": {
+            transform: "translateY(5.34375vw)",
+            opacity: "0",
+          },
+          "25%": {
+            transform: "translateY(5.375vw)",
+            opacity: "0",
+          },
+          "30%": {
+            transform: "translateY(5.34375vw)",
+          },
+          "39%": {
+            transform: "translateY(4.9322916667vw)",
+          },
+          "40%": {
+            transform: "translateY(1.7359375vw)",
+          },
+          "51%": {
+            transform: "translateY(1.125vw)",
+          },
+          "65%": {
+            transform: "translateY(0.5208333333vw)",
+          },
+          "100%": {
+            transform: "translateY(0vw)",
+            opacity: "1",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "twitch-text-jump": "twitch-text-jump 1s",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

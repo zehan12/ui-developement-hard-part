@@ -1,3 +1,9 @@
+import { Hero } from "@/components/twitch/(index)/about/Hero";
+
 export default function Page() {
-    return <section></section>;
+    return (
+        <main>
+            <Hero />
+        </main>
+    );
 }
